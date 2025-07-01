@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary: #7c3aed;
+    --primary-light: #ede9fe;
+    --gray: #f3f4f6;
+    --gray-dark: #6b7280;
+    --white: #fff;
+    --shadow: 0 4px 24px rgba(60, 60, 120, 0logo08);
+     --branco-default: #fff;
+  --box-shadow-roxo: rgba(44, 0, 128, 0.15);
+  --btn-color-roxo:#5a23c8;
+  --btn-hover-roxo: #2b1e6b;
+  --link-login: #b36be2;
+  --link-login-hover: #5a23c8;
+  --link-home-list-hover: #b150a4;
+}
+
+
+body {
+    font-family: urbanist, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Layout Principal */
+header {
+    background-image: linear-gradient(to right, #150832, #5A23C8);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+    font-family: 'Urbanist', sans-serif;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    background-image: linear-gradient(to right, #150832, #5A23C8);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Urbanist', sans-serif;
+}
+
+/* Elementos Gerais */
+h1, h2 {
+    margin-bottom: 20px;
+}
+h2{
+    font-family: 'Urbanist', sans-serif;
+    text-align: center;
+}
+
+section {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Botão Flutuante do Chatbot */
+.chatbot-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background-color: #150832;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.chatbot-button:hover {
+    background-color: #5A23C8;
+    transform: scale(1.1);
+}
+
+.chatbot-button i {
+    color: white;
+    font-size: 40px;
+}
+
+/* Container Principal do Chatbot */
+.chatbot-container {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 450px;
+    height: 80vh;
+    background-color: #aea7bc;
+    
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);    
+    overflow: hidden;
+    z-index: 1000;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+}
+
+/* Header do Chatbot */
+.chatbot-header {
+    background-image: linear-gradient(to right, #150832, #5A23C8);
+    color: white;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    flex-shrink: 0;
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+#close-chatbot {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Área de Mensagens */
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    /* background-color: #f8f9fa; */
+}
+
+/* Mensagens */
+.user-message, .chatbot-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #7d52d4;
+    color: #000000;
+    margin-left: auto;
+}
+
+.chatbot-message {
+    background-color: #f2f1f1;
+    color: #333;
+    margin-right: auto;
+    font-size: 14px;
+}
+
+/* Área de Input */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    border-top: 1px solid #ddd;
+    height: 60px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #7d52d4;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    padding: 8px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+    background-color: #555;
+}
+
+/* Formatação Markdown e Conteúdo das Mensagens */
+.message-content {
+    line-height: 1.4;
+}
+
+.message-content h1, 
+.message-content h2, 
+.message-content h3 {
+    margin: 10px 0;
+}
+
+.message-content h1 { font-size: 1.5em; }
+.message-content h2 { font-size: 1.3em; }
+.message-content h3 { font-size: 1.1em; }
+
+.message-content code,
+.chatbot-message code {
+    background-color: #e8e8e8;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.message-content pre {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+.message-content pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.message-content ul, 
+.message-content ol {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.message-content ul { list-style-type: disc; }
+.message-content ol { list-style-type: decimal; }
+.message-content li { margin: 5px 0; }
+.message-content p { margin: 8px 0; }
+
+.message-content a,
+.chatbot-message a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.message-content a:hover,
+.chatbot-message a:hover {
+    text-decoration: underline;
+}
+
+.message-content strong,
+.chatbot-message strong { 
+    font-weight: bold; 
+}
+
+.message-content em,
+.chatbot-message em { 
+    font-style: italic; 
+}
+
+.message-content br,
+.chatbot-message br { 
+    margin-bottom: 5px; 
+}
+
+.chatbot-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.features {
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.container-principal{
+    padding: 20px;
+    display: flex;
+}
+
+.button-exit{
+    background-color: #5827c1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    text-align: center;
+}
+
+.list-features1 {
+    list-style-type: none;
+    padding: 0;
+}
+.list-features1 li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.list-features2 {
+    list-style-type: none;
+    padding: 0;
+}
+.list-features2 li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.list-features2 {
+    list-style-type: none;
+    padding: 0;
+}
+.list-features2 li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.list-features3 {
+    list-style-type: none;
+    padding: 0;
+}
+.list-features3 li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+
+
+.button-exit:hover {
+    background-color: #7d52d4;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.card-list .card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.card-list .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
