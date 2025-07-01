@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico Videochamadas</title>
+    <link rel="shortcut icon" href="../../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Profissional/tela_historico_videochamada.css">
+    <script src="https://kit.fontawesome.com/a2d9a56b2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Profissional/style_navbar.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+      <div class="logo">
+        <img src="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="logo">
+        Therapy
+      </div>
+      <div class="profile-mini">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Psicólogo">
+        <div class="name"><a href="tela_perfil_profissional.html">Felipe Sousa</a></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="tela_dashboard.html"><i class="fa-solid fa-gauge icon"></i><span class="text">Dashboard</span><span class="tooltip">Dashboard</span></a></li>
+          <li class="container-submenu">
+            <a href="#"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a>
+            <ul class="submenu">
+              <li><a href="tela_historico_videochamadas.html" class="active">Histórico de Meet's</a></li>
+              <li><a href="tela_meet_profissional.html">Iniciar Novo Meet</a></li>
+            </ul>
+          </li>
+          <li class="container-submenu">
+            <a href="#"><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a>
+            <ul class="submenu">
+              <li><a href="tela_gestao_documentos.html">Gestão de Documentos</a></li>
+              <li><a href="tela_gestao_prontuario.html">Gestão de Prontuários</a></li>
+              <li><a href="tela_gestao_financas.html">Gestão de Finanças</a></li>
+            </ul>
+          </li>
+           <li><a href="tela_historico_consultas_profissional.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+          <li class="container-submenu">
+            <a href="#"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a>
+            <ul class="submenu">
+              <li><a href="tela_calendario_agenda.html">Calendario de Consultas</a></li>
+            </ul>
+          </li>
+          <li><a href="tela_lista_paciente.html"><i class="fa-solid fa-users icon"></i><span class="text">Lista de Pacientes</span><span class="tooltip">Lista de Pacientes</span></a></li>
+          <li><a href="tela_mensagem_chat.html"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+          <li><a href="tela_suporte_therapy.html"><i class="fa-solid fa-question"></i><span class="text">Suporte</span><span class="tooltip">Suporte</span></a></li>
+        </ul>
+      </nav>
+      <div class="logout">
+        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+      </div>
+    </aside>
+
+        <main>
+          <section class="main-content">
+            <div class="consultas-header">
+              <h1>Histórico de Videochamadas</h1>
+              <div class="search-sort">
+                  <button id="sort-status">Status <i class="fa-solid fa-caret-down"></i></button>
+                  <button id="sort-date">Data <i class="fa-solid fa-caret-down"></i></button>
+                  <input type="text" id="inputBusca" placeholder="Buscar...">
+              </div>
+            </div>
+
+            <table class="consultas-table">
+              <thead>
+                <th>Nome do Cliente</th>
+                <th>Data</th>
+                <th>Preço</th>
+                <th>Status</th>
+                <th>Opções</th>
+              </thead>
+
+              <tbody id="consultas-body"> 
+                <!-- vou inserir as linhas por meio de javaScript -->
+              </tbody>
+            </table>
+
+            <div class="paginacao">
+              <button id="anteriorPage">Anterior</button>
+              <span id="pageNumbers"></span>
+              <button id="proximaPagina">Próximo</button>
+            </div>
+          </section>
+
+            <div class="header-icons">
+                <a href="#"><i class="fa fa-bell"></i></a></i>
+                <a href="#"><i class="fa fa-cog"></i></a>
+            </div>
+      </main>
+    </div>
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="../../01. JS - Telas de cadastro/Profissional/tela_historico_videochamada.js"></script>
+    <script src="../../01. JS - Telas de cadastro/Profissional/sidebar.js"></script>
+</body>
+</html>

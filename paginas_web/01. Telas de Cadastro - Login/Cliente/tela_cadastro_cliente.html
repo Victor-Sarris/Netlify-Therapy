@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therapy - Formulário</title>
+  <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/tela_cadastro_cliente.css">
+  <link rel="shortcut icon" href="../../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+
+  <nav class="navbar">
+    <div class="navbar-um">
+      <img src="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="Logo Therapy" class="logo-img">
+      <span class="navbar-title">Therapy</span>
+    </div>
+    <div class="navbar-links">
+      <a href="#">Home</a>
+      <a href="#">Atendimento</a>
+      <a href="#">Especialistas</a>
+      <a href="https://linkbio.co/therapy" target="_blank" rel="external">Sobre Nós</a>
+    </div>
+  </nav>
+
+  <div class="section-form">
+    <!-- obs.: aproveitar para outro fomulário -->
+  <h1 class="titulo_Principal">Preencha o Formulário Abaixo</h1>
+  <div class="form-container">
+    <div class="form-title">Sobre Você</div>
+    <form>
+      <div class="form-grid">
+        <div>
+          <div class="form-group">
+            <input type="text" id="nome" placeholder=" " name="nome" required>
+            <label for="nome">Nome</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder=" " name="email" required>
+            <label for="email">Email</label>
+          </div>
+          <div class="form-group">
+            <input type="password" id="senha" placeholder=" " name="senha" required>
+            <label for="senha">Senha</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="telefone" placeholder=" " name="telefone">
+            <label for="telefone">Telefone</label>
+          </div>
+
+          <div class="form-group">            
+            <select id="genero" required>
+              <option value="" disabled selected hidden></option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+              <option value="outro">Outro</option>
+              </select>
+            <label for="genero">Gênero</label>
+          </div>
+        </div>
+        <div class="cpf-section">
+          <div class="form-group">
+            <input type="text" placeholder=" " id="cpf" name="cpf">
+            <label for="cpf">CPF</label>
+          </div>
+          <div class="cpf-checkbox">
+            <input type="checkbox" id="estrangeiro" name="estrangeiro">
+            <label for="estrangeiro">Sou pessoa estrangeira, não tenho CPF</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-footer">
+        <input type="checkbox" id="termos" name="termos" required>
+        <label for="termos">
+          Você concorda com nossos termos de <a href="#">privacidade</a> e <a href="#">política</a>
+        </label>
+      </div>
+    </form>
+    <a href="tela_outros_especialistas.html" class="bnt-enviar"><button type="submit" class="submit-btn">Enviar Cadastro</button></a>  
+  </div>
+  </div>
+  
+  <br><br>
+
+      <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>

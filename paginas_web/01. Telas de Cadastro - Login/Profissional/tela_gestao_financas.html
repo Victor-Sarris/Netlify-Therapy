@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Finanças - Therapy</title>
+  <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Profissional/tela_gestao_financas.css">
+  <link rel="shortcut icon" href="../../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Profissional/style_navbar.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="logo">
+        Therapy
+      </div>
+      <div class="profile-mini">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Psicólogo">
+        <div class="name"><a href="tela_perfil_profissional.html">Felipe Sousa</a></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="tela_dashboard.html"><i class="fa-solid fa-gauge icon"></i><span class="text">Dashboard</span><span class="tooltip">Dashboard</span></a></li>
+          <li class="container-submenu">
+            <a href="#"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a>
+            <ul class="submenu">
+              <li><a href="tela_historico_videochamadas.html">Histórico de Meet's</a></li>
+              <li><a href="tela_meet_profissional.html">Iniciar Novo Meet</a></li>
+            </ul>
+          </li>
+          <li class="container-submenu">
+            <a href="#" class="active"><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a>
+            <ul class="submenu">
+              <li><a href="tela_gestao_documentos.html">Gestão de Documentos</a></li>
+              <li><a href="tela_gestao_prontuario.html">Gestão de Prontuários</a></li>
+              <li><a href="tela_gestao_financas.html" class="active">Gestão de Finanças</a></li>
+            </ul>
+          </li>
+           <li><a href="tela_historico_consultas_profissional.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+          <li class="container-submenu">
+            <a href="#"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a>
+            <ul class="submenu">
+              <li><a href="tela_calendario_agenda.html">Calendario de Consultas</a></li>
+            </ul>
+          </li>
+          <li><a href="tela_lista_paciente.html"><i class="fa-solid fa-users icon"></i><span class="text">Lista de Pacientes</span><span class="tooltip">Lista de Pacientes</span></a></li>
+          <li><a href="tela_mensagem_chat.html"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+          <li><a href="tela_suporte_therapy.html"><i class="fa-solid fa-question"></i><span class="text">Suporte</span><span class="tooltip">Suporte</span></a></li>
+        </ul>
+      </nav>
+      <div class="logout">
+        <a href="../tela_de_login.html"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+      </div>
+    </aside>
+     <main class="main-content">
+        <header>
+        <div class="search">
+          <input type="text" placeholder="Pesquisar...">
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="header-icons">
+          <i class="fa fa-bell"></i>
+          <i class="fa fa-cog"></i>
+        </div>
+      </header>
+      <section class="welcome">
+        <div>
+          <h2>Bem-Vindo</h2>
+          <h1>As suas Finanças Psic. Felipe</h1>
+          <p>Gerencie suas tarefas, suas consultas e outras opções dentro do Therapy.</p>
+        </div>
+        <div class="header-image">
+            <img src="../../01. and_icons_and_images/icons_tela_gestao_documentos/mulher-apontando-para-calendario.png" alt="Ilustração">
+        </div>
+      </section>
+
+      <div class="card-container">
+        <div class="finance-card">
+            <div class="summary-card">
+                <div class="summary-content">
+                    <span class="summary-title">Total Previsto</span>
+                    <span class="summary-value1">R$650,00</span>
+                </div>
+                <i class="fas fa-chart-line summary-icon"></i>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-content">
+                    <span class="summary-title">Receitas Pagas</span>
+                    <span class="summary-value2">R$450,00</span>
+                </div>
+                <i class="fas fa-check-circle summary-icon"></i>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-content">
+                    <span class="summary-title">Receitas Não Pagas</span>
+                    <span class="summary-value3">R$200,00</span>
+                </div>
+                <i class="fas fa-exclamation-circle summary-icon"></i>
+            </div>
+
+        </div>
+      </div>
+
+      <p class="caminho">Home / Gestão / Finanças</p>
+
+    <section class="documents-sections">
+        <div class="campo1">
+            <div class="search">
+                <input type="text" placeholder="Procurar por...">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+    </section>
+    <table>
+      <thead>
+        <tr>
+          <th>Data do meet</th>
+          <th>Particular / Convenio</th>
+          <th>Status</th>
+          <th>Cliente</th>
+          <th>Data de vencimento</th>
+          <th>Valor</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>20/02/2025</td>
+          <td>Particular</td>
+          <td><span class="statusPago">Pago</span></td>
+          <td>Amanda</td>
+          <td>23 Fev, 2025</td>
+          <td>$100</td>
+          <td>Sessão</td>
+        </tr>
+        <tr>
+          <td>10/03/2025</td>
+          <td>Convenio</td>
+          <td><span class="statusPendente">Pendente</span></td>
+          <td>Ronaldo</td>
+          <td>Mar 13, 2025</td>
+          <td>$100</td>
+          <td>Sessão</td>
+        </tr>
+        <tr>
+            <td>06/03/2024</td>
+            <td>Particular</td>
+            <td><span class="statusPendente">Pendente</span></td>
+            <td>Ana Paula</td>
+            <td>Mar 08, 2025</td>
+            <td>$50</td>
+            <td>Sessão</td>
+        <tr>
+            <td>03/02/2025</td>
+            <td>Particular</td>
+            <td><span class="statusNaoPago">Não Pago</span></td>
+            <td>Yasmin</td>
+            <td>Fev 06, 2025</td>
+            <td>$100</td>
+            <td>Sessão</td>
+        </tr>
+        <tr>
+            <td>20/02/2025</td>
+            <td>Convenio</td>
+            <td><span class="statusPago">Pago</span></td>
+            <td>Matheus</td>
+            <td>Fev 24, 2025</td>
+            <td>$100</td>
+            <td>Sessão</td>
+        </tr>
+        <tr>
+            <td>28/02/2024</td>
+            <td>Particular</td>
+            <td><span class="statusPago">Pago</span></td>
+            <td>Izaque</td>
+            <td>Mar 03, 2025</td>
+            <td>$50</td>
+            <td>Sessão</td>
+        </tr>
+        <tr>
+            <td>20/03/2025</td>
+            <td>Convenio</td>
+            <td><span class="statusPendente">Pendente</span></td>
+            <td>Sabrina</td>
+            <td>Mar 23, 2025</td>
+            <td>$100</td>
+            <td>Sessão</td>
+        </tr>
+        <tr>
+            <td>27/01/2025</td>
+            <td>Particular</td>
+            <td><span class="statusNaoPago">Não Pago</span></td>
+            <td>Victor</td>
+            <td>Jan 30, 2025</td>
+            <td>$100</td>
+            <td>Sessão</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+      <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+  <script src="../../01. JS - Telas de cadastro/Profissional/sidebar.js"></script>
+</body>
+</html>

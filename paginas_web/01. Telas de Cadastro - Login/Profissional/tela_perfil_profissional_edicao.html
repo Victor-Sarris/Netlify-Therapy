@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editar Perfil - Therapy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Profissional/tela_perfil_profissional_edicao.css" />
+  <link rel="shortcut icon" href="../../01. and_icons_and_images/icons_tela_perfil_profissional/FiveIcon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <div class="container">
+        <aside class="sidebar">
+      <div class="logo">
+        <img src="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="logo">
+        Therapy
+      </div>
+      <div class="profile-mini">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Psicólogo">
+        <div class="name"><a href="tela_perfil_profissional.html" class="active">Felipe Sousa</a></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="tela_dashboard.html"><i class="fa-solid fa-gauge icon"></i><span class="text">Dashboard</span><span class="tooltip">Dashboard</span></a></li>
+          <li class="container-submenu">
+            <a href="#"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a>
+            <ul class="submenu">
+              <li><a href="tela_historico_videochamadas.html">Histórico de Meet's</a></li>
+              <li><a href="tela_meet_profissional.html">Iniciar Novo Meet</a></li>
+            </ul>
+          </li>
+          <li class="container-submenu">
+            <a href="#"><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a>
+            <ul class="submenu">
+              <li><a href="tela_gestao_documentos.html">Gestão de Documentos</a></li>
+              <li><a href="tela_gestao_prontuario.html">Gestão de Prontuários</a></li>
+              <li><a href="tela_gestao_financas.html">Gestão de Finanças</a></li>
+            </ul>
+          </li>
+           <li><a href="tela_historico_consultas_profissional.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+          <li class="container-submenu">
+            <a href="#"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a>
+            <ul class="submenu">
+              <li><a href="tela_calendario_agenda.html">Calendario de Consultas</a></li>
+            </ul>
+          </li>
+          <li><a href="tela_lista_paciente.html"><i class="fa-solid fa-users icon"></i><span class="text">Lista de Pacientes</span><span class="tooltip">Lista de Pacientes</span></a></li>
+          <li><a href="tela_mensagem_chat.html"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+          <li><a href="tela_suporte_therapy.html"><i class="fa-solid fa-question"></i><span class="text">Suporte</span><span class="tooltip">Suporte</span></a></li>
+        </ul>
+      </nav>
+      <div class="logout">
+        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+      </div>
+    </aside>
+    <main class="content">
+      <header class="topbar">
+        <h2>Edite seu Perfil do Profissional</h2>
+        <div class="actions">
+          <button class="btn">Alterar Dados</button>
+        </div>
+      </header>
+
+      <section class="profile-section">
+        <div class="profile-header">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto" class="profile-pic" />
+          <div>
+            <h3>Felipe Sousa</h3>
+            <p>FelipeSousa@gmail.com</p>
+          </div>
+        </div>
+
+        <form class="profile-form">
+  <div class="form-group">
+    <h4>Sobre Você</h4>
+    
+    <div class="input-group">
+      <input type="text" id="nome" placeholder=" " />
+      <label for="nome">Nome</label>
+    </div>
+    
+    <div class="input-group">
+      <input type="email" id="email" placeholder=" " />
+      <label for="email">Email</label>
+    </div>
+    
+    <div class="input-group">
+      <input type="password" id="senha" placeholder=" " />
+      <label for="senha">Senha</label>
+    </div>
+    
+    <div class="form-row">
+      <div class="input-group">
+        <input type="text" id="telefone" placeholder=" " />
+        <label for="telefone">Telefone</label>
+      </div>
+      <div class="input-group">
+        <input type="text" id="cpf" placeholder=" " />
+        <label for="cpf">CPF</label>
+      </div>
+    </div>
+    
+    <div class="input-group">
+      <input type="text" id="genero" placeholder=" " />
+      <label for="genero">Gênero</label>
+    </div>
+    
+    <button type="button" class="add-email">Add Outro Email</button>
+  </div>
+
+  <div class="form-group">
+    <h4>Sua Especialidade</h4>
+    
+    <div class="input-group">
+      <input type="text" id="abordagem" placeholder=" " />
+      <label for="abordagem">Abordagem</label>
+    </div>
+    
+    <div class="input-group">
+      <textarea id="descricao" placeholder=" "></textarea>
+      <label for="descricao">Descrição</label>
+    </div>
+    
+    <div class="input-group">
+      <textarea id="bio" placeholder=" "></textarea>
+      <label for="bio">Bio</label>
+    </div>
+    
+    <div class="input-group">
+      <input type="text" id="tematica" placeholder=" " />
+      <label for="tematica">Temática</label>
+    </div>
+    <div class="upload-box">
+      <p>Arraste e solte o arquivo de imagem aqui</p>
+      <button type="button">Escolher arquivo</button>
+    </div>
+  </div>
+</form>
+  </div>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+  <script src="../../01. JS - Telas de cadastro/Profissional/sidebar.js"></script>
+</body>
+</html>

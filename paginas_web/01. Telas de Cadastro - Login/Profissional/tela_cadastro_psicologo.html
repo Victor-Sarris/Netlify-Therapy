@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Psicólogo</title>
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/tela_cadastro_psicologo.css">
+    <link rel="shortcut icon" href="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" type="image/x-icon">
+</head>
+<body>
+    <header class="navbar"> <!--código da navbar-->
+        <div class="logo"><img src="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="">Therapy</div>
+        <nav>
+            <ul>
+            <li><a href="#" id="Home">Home</a></li>
+            <li><a href="#">Atendimento</a></li>
+            <li><a href="#">Especialistas</a></li>
+            <li><a href="https://linkbio.co/therapy" target="_blank" rel="external">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="section.form">
+        <div class="flex" id="texto-alinhados">
+        <div class="container" id="filha01">
+            <h1>Preencha o formulário abaixo</h1>
+        </div>
+        <div class="box">
+            <div class="flex">
+                <div class="container">
+                    <h2>Sobre você</h2>
+                        <div class="form-group">
+                            <input type="text" placeholder=" " id="nome" required>
+                            <label for="nome">Nome</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" placeholder=" " id="email" required>
+                            <label for="email">Email</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" placeholder=" " id="senha" required>
+                            <label for="senha">Senha</label>
+                        </div>
+
+                        <div class="telefone-cpf">
+                            <div class="form-group">
+                                <input type="text" name="telefone"
+                                id="telefone"
+                                placeholder=" " required>
+                                <label for="telefone">Telefone</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="cpf" placeholder=" " required>
+                                <label for="cpf">CPF</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <select id="genero" required>
+                                <option value="" disabled selected hidden></option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                            <label for="genero">Gênero</label>
+                        </div>
+                </div>
+
+                <div class="container">
+                    <h2>Sua Especialidade</h2>
+                        <div class="checkbox-group">
+                            <div>
+                                <input type="checkbox" id="psicologo">
+                                <label for="psicologo">Psicólogo(a)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="psicanalista">
+                                <label for="psicanalista">Psicanalista</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="terapeuta">
+                                <label for="terapeuta">Terapeuta</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" name="crp" id="crp" placeholder=" " required>
+                            <label for="crp">CRP</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="abordagem" id="abordagem" placeholder=" " required>
+                            <label for="abordagem">Abordagem</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="descricao" id="descricao" placeholder=" " required>
+                            <label for="descricao">Descrição</label>
+                        </div>
+
+                        <div class="form-footer">
+                            <input type="checkbox" id="termos" name="termos" required>
+                            <label for="termos">
+                            Você concorda com nossos termos de <a href="#">privacidade</a> e <a href="#">política</a>
+                            </label>
+                        </div>
+                </div>
+            </div>
+            <a href="tela_dashboard.html" class="bnt-enviar"><button type="submit" class="submit-btn">Enviar Cadastro</button></a>      
+        </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+    <div class="info-header">
+        <h2>Acompanhe o seu processo</h2>
+        <p>Siga os passos a seguir, faça parte da Therapy!</p>
+    </div>
+
+    <div class="info-cards">
+        <div class="info-card">
+            <img src="../../01. and_icons_and_images/icons_psicologo_cadastro/cadastro.png" alt="Ícone 1">
+            <h3>Envie Seu Cadastro</h3>
+            <p>Preencha o formulário com seus dados profissionais e envie seus documentos, como CRP ativo e especializações.</p>
+        </div>
+
+        <div class="info-card">
+            <img src="../../01. and_icons_and_images/icons_psicologo_cadastro/validacao.png" alt="Ícone 2">
+            <h3>Validação de Perfil</h3>
+            <p>Nossa equipe verifica suas informações e documentos, e em até 48 horas você recebe a aprovação por e-mail.</p>
+        </div>
+
+        <div class="info-card">
+            <img src="../../01. and_icons_and_images/icons_psicologo_cadastro/Ativação.png" alt="Ícone 2">
+            <h3>Ativação e Primeiro Atendimento</h3>
+            <p>Após a aprovação do perfil, agende consultas ou plantões psicológicos e comece a atender pacientes online.</p>
+        </div>
+    </div>
+</section>
+
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+</body>
+</html>

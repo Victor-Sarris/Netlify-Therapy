@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet</title>
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/tela_meet_paciente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="shortcut icon" href="../../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
+    <script src='https://meet.jit.si/external_api.js'></script>
+</head>
+<body>
+
+  <div class="main-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo"><img src="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="logo"> <span class="logo-text">Therapy</span></div>
+            </div>
+            <div class="profile-mini">
+                <img src="../../01. and_icons_and_images/img_cliente/cliente.png" alt="Foto do cliente">
+                <div class="name"><a href="tela_perfil_cliente.html">Davi Oliveira</a></div>
+            </div>
+            <nav>
+                <ul>
+                     <li><a href="tela_outros_especialistas.html"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
+                     
+                    <li><a href="#" onclick="showMeetPopup()" class="active"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
+                    <li><a href="tela_historico_consultas.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+                    <li><a href="tela-agenda.html"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
+                    <li><a href="tela_msg_cliente.html"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+                    <li><a href="tela_perfil_cliente_edicao.html"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../tela_de_login.html"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+            </div>
+        </aside>
+
+
+    <main>
+        <section class="meet-info">
+        <h2>Therapy Meet</h2>
+        <p class="date" id="date">10 Dez 2024</p>
+        <p class="time" id="time">14:00</p>
+        <p class="recording"><span>🔴 Gravando</span></p> </section>
+
+        <div class="video-call">
+            <div id="meet-container"></div>
+        </div>
+    </main>
+
+        <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="../../01. JS - Telas de cadastro/Paciente/tela_meet_paciente.js"></script>
+
+
+</body>
+</html>

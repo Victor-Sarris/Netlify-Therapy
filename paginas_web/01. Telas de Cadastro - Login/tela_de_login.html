@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../01. Css - Telas de Cadasto - Login/tela_de_login.css">
+  <link rel="shortcut icon" href="../01. and_icons_and_images/tela_de_login - icons/FiveIcon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="navbar"> <!--código da navbar, consulte o css-->
+    <div class="logo"><img src="../01. and_icons_and_images/tela_de_login - icons/logo_therapy.png" alt="Logo Therapy">Therapy</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="Home">Home</a></li>
+        <li><a href="https://linkbio.co/therapy"  target="_blank" rel="external">Sobre Nós</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--Main principal-->
+  <main>
+    <div class="login-box">
+      <h2>Acesse sua conta!</h2>
+      <div class="role-selector">
+        <label><input type="radio" name="role" checked> <span>Psicólogo(a</span>)</label>
+        <label><input type="radio" name="role"> <span>Paciente</span></label>
+      </div>
+      <form>
+        <div class="form-group">
+          <input type="email" id="email" placeholder=" " required>
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+          <input type="password" id="senha" placeholder=" " required>
+          <label for="senha">Senha</label>
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+      <p class="signup-link">Não possui uma conta? <a href="tela_tipo_cadastro.html">Cadastre-se</a></p>
+    </div>
+  </main>
+
+      <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>

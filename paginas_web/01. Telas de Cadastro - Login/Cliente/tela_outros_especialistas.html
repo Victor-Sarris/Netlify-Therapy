@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialistas - Therapy</title>
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/style_navbar.css">
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/tela_especialista.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="shortcut icon" href="../../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/tela_outros_especialistas.css">
+    
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo"><img src="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="logo"> <span class="logo-text">Therapy</span></div>
+            </div>
+            <div class="profile-mini">
+                <img src="../../01. and_icons_and_images/img_cliente/cliente.png" alt="Foto do cliente">
+                <div class="name"><a href="tela_perfil_cliente.html">Davi Oliveira</a></div>
+            </div>
+            <nav>  <!-- obs.:sidebar cliente-->
+                <ul>
+                     <li><a href="tela_outros_especialistas.html" class="active"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
+                     
+                    <li><a href="tela_meet_paciente.html"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
+                   
+                    <li><a href="tela_historico_consultas.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+                    <li><a href="tela-agenda.html"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
+                  
+                    <li><a href="tela_msg_cliente.html"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+                    <li><a href="tela_perfil_cliente_edicao.html"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../tela_de_login.html"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+            </div>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="content">
+            <div class="container">
+                <h1 class="page-title">Você buscou por esses Especialistas</h1>
+                
+                <!-- Barra de Pesquisa -->
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="searchInput" placeholder="Buscar por especialidade, nome, localização..." class="search-input">
+                        <button class="search-button" onclick="performSearch()">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-filters">
+                        <select id="specialtyFilter" class="filter-select">
+                            <option value="">Todas as Especialidades</option>
+                            <option value="psicologo">Psicólogo</option>
+                            <option value="psicanalista">Psicanalista</option>
+                            <option value="psiquiatra">Psiquiatra</option>
+                            <option value="terapeuta">Terapeuta</option>
+                        </select>
+                        <select id="locationFilter" class="filter-select">
+                            <option value="">Todas as Localizações</option>
+                            <option value="floriano">Floriano - PI</option>
+                            <option value="teresina">Teresina - PI</option>
+                            <option value="picos">Picos - PI</option>
+                        </select>
+                        <select id="priceFilter" class="filter-select">
+                            <option value="">Qualquer Preço</option>
+                            <option value="0-100">Até R$ 100</option>
+                            <option value="100-150">R$ 100 - R$ 150</option>
+                            <option value="150-200">R$ 150 - R$ 200</option>
+                            <option value="200+">Acima de R$ 200</option>
+                        </select>
+                        <button class="clear-filters-btn" onclick="clearFilters()">
+                            <i class="fas fa-times"></i> Limpar Filtros
+                        </button>
+                    </div>
+                </div>
+
+                <div class="specialists-list">
+                    <!-- Cartão de Especialista 1 -->
+                    <div class="specialist-card fade-in">
+                        <div class="specialist-info">
+                            <div class="profile-pic">
+                                <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="Seline Melo">
+                            </div>
+                            <div class="info-main">
+                                <div class="info-header">
+                                    <span class="badge-new">PERFIL NOVO</span>
+                                    <h2 class="name">Seline Melo</h2>
+                                </div>
+                                <span class="title">Psicóloga, Psicanalista</span>
+                                <div class="rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span class="reviews">50 opiniões</span>
+                                </div>
+                                <div class="crp">CRP 05/30054</div>
+                                <div class="address">Endereço: Rua Silveira Neto, 129, Floriano - PI</div>
+                                <span class="badge-tele">Teleconsulta</span>
+                                <div class="price">R$ 160</div>
+                                <p class="desc">Oi! Que bom que você chegou aqui!<br>Através da experiência pessoal e profissional afirmo que é possível transformar-se através do autoconhecimento. Permita-se encontrar uma nova maneira de sentir e viver a vida através da psicanálise e mudança de hábitos.<br>Eu posso ajudar você nesse caminho! Vamos?</p>
+                                <button class="btn-more">Agendar Consulta<span>&rarr;</span></button>
+                            </div>
+                        </div>
+                        <div class="schedule-section">
+                            <div class="schedule-table">
+                                <div class="schedule-header">
+                                    <span>Hoje<br><small>4 Fev</small></span>
+                                    <span>Amanhã<br><small>5 Fev</small></span>
+                                    <span>Sex,<br><small>6 Fev</small></span>
+                                    <span>Sab,<br><small>7 Fev</small></span>
+                                </div>
+                                <div class="schedule-body">
+                                    <span>–</span>
+                                    <span><button class="btn-hour">07:05</button></span>
+                                    <span><button class="btn-hour">13:15</button></span>
+                                    <span><button class="btn-hour">19:45</button></span>
+                                </div>
+                                <div class="schedule-body">
+                                    <span>–</span>
+                                    <span><button class="btn-hour">08:45</button></span>
+                                    <span><button class="btn-hour">15:15</button></span>
+                                    <span><button class="btn-hour">17:45</button></span>
+                                </div>
+                                <div class="schedule-body more-hours" style="display:none;">
+                                    <span>–</span>
+                                    <span><button class="btn-hour">09:55</button></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <button class="btn-more-hours">Mostrar mais horários</button>
+                            </div>
+                            <div class="topics">
+                                <div class="topics-title">Temática</div>
+                                <div class="topics-list">
+                                    <span class="chip">Ansiedade</span>
+                                    <span class="chip">TOC</span>
+                                    <span class="chip">Autoconhecimento</span>
+                                    <span class="chip">TDAH</span>
+                                    <span class="chip">Depressão</span>
+                                    <span class="chip">Relacionamentos / Conflitos Familiares</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Pop-up de Confirmação de Consulta -->
+    <div class="popup-overlay" id="meetPopup">
+        <div class="popup-content">
+            <div class="appointment-card">
+                <div class="appointment-header">
+                    <div class="appointment-profile">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do profissional">
+                        <div class="appointment-info">
+                            <span>Felipe Sousa</span>
+                            <span>Psicólogo</span>
+                        </div>
+                    </div>
+                    <div style="text-align: right; color: #6b7280; font-size: 0.98em;">50 minutos</div>
+                </div>
+                <div class="appointment-details">
+                    <span>&#128197; 10/06/25</span>
+                    <span>&#128337; 09:00</span>
+                </div>
+                <div class="appointment-actions">
+                    <button class="btn-primary" onclick="window.open('https://meet.google.com/jkb-npqo-dkw', '_blank')">Iniciar Sessão</button>
+                    <button class="btn-outline" onclick="openChat()">Chat</button>
+                </div>
+                <div class="appointment-footer">
+                    <a href="#" onclick="hideMeetPopup()">Cancelar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Modal de agendamento -->
+
+    <!-- Modal de Agendamento -->
+<div class="modal-overlay" id="consultaModal" style="display: none;">
+    <div class="container-modal">
+        <div class="modal-content">
+
+            <div class="resumo-consulta">
+                <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="Seline Melo">
+                <div>
+                    <strong>Seline Melo</strong><br>
+                    Psicóloga, Psicanalista<br>
+                    📅 7 Fev 2025, 07:05<br>
+                    💳 <span style="color: #00B894;">Pagamento Online - PIX</span><br>
+                    <small>Selecione a forma de pagamento agora e cancele em até 24h antes da visita e receba reembolso.</small>
+                </div>
+            </div>
+            
+            <button class="close-modal" onclick="fecharModal()">×</button>
+            <h2>Selecione as opções da Consulta</h2>
+            <label>Tipo de Consulta:</label>
+            <div class="input-group">
+                <input type="text" value="Consulta Psicanálise R$ 150,00" disabled>
+                <a href="#" class="alterarBtn">Alterar</a>
+            </div>
+            <label>Convênio Médico:</label>
+            <input type="text" value="Não aceitamos convênio médico" disabled>
+            <p class="info-text">Este especialista não aceita nenhum tipo de convênio médico</p>
+            <label>É o seu primeiro atendimento com este especialista?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="primeiraConsulta" value="sim"> Sim</label>
+                <label><input type="radio" name="primeiraConsulta" value="nao"> Não</label>
+            </div>
+            <button class="btn-continuar">Continuar</button>
+    </div>
+    </div>
+</div>
+
+
+
+
+    <!-- Scripts -->
+    <script src="employees.js"></script>
+    <script src="../../01. JS - Telas de cadastro/Paciente/popup-meet.JS"></script>
+    <script src="../../01. JS - Telas de cadastro/Paciente/tela_outos_especialistas.JS"></script>
+    
+    <!-- Script para funcionalidade de pesquisa -->
+    <script>
+        // Função para controlar a sidebar quando clicar na barra de pesquisa
+        function toggleSidebarForSearch() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContainer = document.querySelector('.main-container');
+            const searchInput = document.getElementById('searchInput');
+            
+            // Adiciona evento de clique na barra de pesquisa
+            searchInput.addEventListener('click', function() {
+                // Recolhe a sidebar quando clicar na barra de pesquisa
+                sidebar.classList.add('collapsed');
+                mainContainer.classList.add('sidebar-collapsed');
+            });
+            
+            // Adiciona evento de clique fora da barra de pesquisa para expandir a sidebar
+            document.addEventListener('click', function(event) {
+                const isClickInsideSearch = searchInput.contains(event.target);
+                const isClickInsideSidebar = sidebar.contains(event.target);
+                
+                // Se clicou fora da barra de pesquisa e da sidebar, expande a sidebar
+                if (!isClickInsideSearch && !isClickInsideSidebar) {
+                    sidebar.classList.remove('collapsed');
+                    mainContainer.classList.remove('sidebar-collapsed');
+                }
+            });
+        }
+        
+        // Função para realizar a pesquisa
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const specialtyFilter = document.getElementById('specialtyFilter').value.toLowerCase();
+            const locationFilter = document.getElementById('locationFilter').value.toLowerCase();
+            const priceFilter = document.getElementById('priceFilter').value;
+            
+            const specialistCards = document.querySelectorAll('.specialist-card');
+            
+            specialistCards.forEach(card => {
+                let showCard = true;
+                
+                // Pesquisa por texto (nome, descrição, especialidade)
+                if (searchTerm) {
+                    const cardText = card.textContent.toLowerCase();
+                    if (!cardText.includes(searchTerm)) {
+                        showCard = false;
+                    }
+                }
+                
+                // Filtro por especialidade
+                if (specialtyFilter && showCard) {
+                    const title = card.querySelector('.title').textContent.toLowerCase();
+                    if (!title.includes(specialtyFilter)) {
+                        showCard = false;
+                    }
+                }
+                
+                // Filtro por localização
+                if (locationFilter && showCard) {
+                    const address = card.querySelector('.address').textContent.toLowerCase();
+                    if (!address.includes(locationFilter)) {
+                        showCard = false;
+                    }
+                }
+                
+                // Filtro por preço
+                if (priceFilter && showCard) {
+                    const priceText = card.querySelector('.price').textContent;
+                    const price = parseInt(priceText.replace('R$ ', ''));
+                    
+                    switch(priceFilter) {
+                        case '0-100':
+                            if (price > 100) showCard = false;
+                            break;
+                        case '100-150':
+                            if (price < 100 || price > 150) showCard = false;
+                            break;
+                        case '150-200':
+                            if (price < 150 || price > 200) showCard = false;
+                            break;
+                        case '200+':
+                            if (price < 200) showCard = false;
+                            break;
+                    }
+                }
+                
+                // Mostra ou esconde o card
+                card.style.display = showCard ? 'grid' : 'none';
+            });
+            
+            // Atualiza o título da página
+            const pageTitle = document.querySelector('.page-title');
+            if (searchTerm || specialtyFilter || locationFilter || priceFilter) {
+                pageTitle.textContent = 'Resultados da sua busca';
+            } else {
+                pageTitle.textContent = 'Você buscou por esses Especialistas';
+            }
+        }
+        
+        // Pesquisa em tempo real
+        document.getElementById('searchInput').addEventListener('input', performSearch);
+        document.getElementById('specialtyFilter').addEventListener('change', performSearch);
+        document.getElementById('locationFilter').addEventListener('change', performSearch);
+        document.getElementById('priceFilter').addEventListener('change', performSearch);
+        
+        // Pesquisa ao pressionar Enter
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        // Limpar filtros
+        function clearFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('specialtyFilter').value = '';
+            document.getElementById('locationFilter').value = '';
+            document.getElementById('priceFilter').value = '';
+            performSearch();
+        }
+        
+        // Inicializa a sidebar expandida ao carregar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContainer = document.querySelector('.main-container');
+            
+            // Garante que a sidebar começa expandida
+            sidebar.classList.remove('collapsed');
+            mainContainer.classList.remove('sidebar-collapsed');
+            
+            // Inicializa a funcionalidade de toggle da sidebar
+            toggleSidebarForSearch();
+        });
+    </script>
+
+        <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>

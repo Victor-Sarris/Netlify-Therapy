@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary: #7c3aed;
+    --primary-light: #ede9fe;
+    --gray: #f3f4f6;
+    --gray-dark: #6b7280;
+    --white: #fff;
+    --shadow: 0 4px 24px rgba(60, 60, 120, 0.08);
+    --branco-default: #fff;
+    --box-shadow-roxo: rgba(44, 0, 128, 0.15);
+    --btn-color-roxo:#5a23c8;
+    --btn-hover-roxo: #2b1e6b;
+    --link-login: #b36be2;
+    --link-login-hover: #5a23c8;
+    --link-home-list-hover: #b150a4;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #fafafd;
+    margin: 0;
+    color: #222;
+}
+
+main {
+  margin-left: 80px;
+  width: calc(100% - 300px);
+}
+
+
+/* Layout principal com sidebar */
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--white);
+    width: 260px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0 16px 0;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 32px 32px 32px;
+}
+
+.sidebar-toggle {
+    background: var(--primary-light);
+    color: var(--primary);
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+.sidebar-toggle:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.sidebar-toggle i {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.logo-text {
+    transition: opacity 0.3s ease;
+}
+
+.logo img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-light);
+    transition: all 0.3s ease;
+}
+
+.sidebar .profile-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 32px 32px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .profile-mini img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-light);
+    transition: all 0.3s ease;
+}
+
+.sidebar .profile-mini .name {
+    font-size: 1rem;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar .profile-mini .name a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar nav {
+    transition: all 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0 0 0 16px;
+}
+
+.sidebar li {
+    margin-bottom: 18px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--gray-dark);
+    font-size: 1.08rem;
+    padding: 10px 18px;
+    border-radius: 8px 0 0 8px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.sidebar a .text {
+    transition: opacity 0.3s ease;
+}
+
+.sidebar a.active, .sidebar a:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.sidebar a .icon {
+    font-size: 1.2rem;
+    position: relative;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Tooltip */
+.sidebar a .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 6px;
+    padding: 4px 10px;
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%) scale(0.95);
+    white-space: nowrap;
+    font-size: 0.95rem;
+    pointer-events: none;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 10;
+}
+
+.sidebar a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+
+.sidebar .logout {
+    margin: 0 16px 0 16px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .logout a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--gray-dark);
+    font-size: 1.08rem;
+    padding: 10px 18px;
+    border-radius: 8px 0 0 8px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.sidebar .logout a:hover {
+    background: #fef2f2;
+    color: #ef4444;
+}
+
+.sidebar .logout a .text {
+    transition: opacity 0.3s ease;
+}
+
+/* Estados collapsed da sidebar */
+.sidebar.collapsed {
+    width: 80px;
+    padding: 32px 0 16px 0;
+}
+
+.sidebar.collapsed .sidebar-header {
+    margin: 0 16px 32px 16px;
+    justify-content: center;
+}
+
+.sidebar.collapsed .logo-text {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .profile-mini {
+    margin: 0 0 32px 16px;
+    justify-content: center;
+}
+
+.sidebar.collapsed .profile-mini .name {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.sidebar.collapsed nav {
+    padding: 0 8px;
+}
+
+.sidebar.collapsed ul {
+    padding: 0;
+}
+
+.sidebar.collapsed a {
+    padding: 10px;
+    justify-content: center;
+    border-radius: 8px;
+    margin: 0 8px 8px 8px;
+}
+
+.sidebar.collapsed a .text {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .logout {
+    margin: 0 8px 0 8px;
+    text-align: center;
+}
+
+.sidebar.collapsed .logout .text {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .logout a {
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Ajuste do conteúdo quando sidebar está collapsed */
+.main-container.sidebar-collapsed .content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f7f7;
+  color: #333;
+}
+
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5e2ca5;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+main {
+  padding: 40px;
+}
+
+.meet-info {
+  margin-bottom: 20px;
+}
+
+.meet-info h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.date, .recording {
+  font-size: 14px;
+  color: #888;
+}
+
+.recording {
+  color: red;
+}
+
+.video-call {
+  position: relative;
+  max-width: 800px;
+  margin-left: 60px;
+}
+
+.video-container {
+  width: 100%;
+}
+
+.video-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  align-items: center;
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ece0ff;
+  color: #6b30c3;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  margin-top: -5px;
+}
+
+.controls button {
+  background: #e0e0e0;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.controls .end-call {
+  background: #5e2ca5;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.controls img {
+  width: 20px;
+  height: 20px;
+}
+
+.user-avatar {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  text-align: center;
+}
+
+.user-avatar img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.user-avatar span {
+  display: block;
+  margin-top: 5px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* ... (todo o seu CSS existente) */
+
+/* container do meet*/
+#meet-container {
+    width: 1100px;
+    height: 600px; 
+    background-color: #f0f0f0; 
+    margin-left: -125px; /* alinhei a margen um pouco mais a esquerda*/
+    border: #7c3aed 2px solid;
+    box-shadow: 0 4px 24px rgba(60, 60, 120, 0.08);
+}
+
+/* Opcional: Remover os controles antigos se ainda estiverem no CSS */
+.controls, .user-avatar {
+    display: none;
+}

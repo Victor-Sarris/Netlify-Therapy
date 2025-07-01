@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --background-roxo: linear-gradient(to bottom, #0f0623, #2b0f6b);
+  --branco-default: #fff;
+  --box-shadow-roxo: rgba(44, 0, 128, 0.15);
+  --btn-color-roxo:#5a23c8;
+  --btn-hover-roxo: #2b1e6b;
+  --link-login: #b36be2;
+  --link-login-hover: #5a23c8;
+  --link-home-list-hover: #b150a4;
+}
+body {
+  margin: 10;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(to bottom, #0f0623, #2b0f6b);
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 60px 0 60px;
+}
+.navbar-um {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img{
+  width: 75px;
+}
+
+.logo {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Urbanist', Arial, sans-serif;
+}
+
+
+.logo-img {
+  width: 75px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.navbar-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 32px;
+}
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+.navbar-links a:hover {
+  color: #a084e8;
+}
+.titulo_Principal  {
+  margin-top: 60px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-left: 100px;
+  color: #fff;
+  margin-left: 150px;
+  
+  margin-left: 150px;
+}
+.form-container {
+  background: #fff;
+  border-radius: 32px;
+  margin: 48px auto 0 auto;
+  max-width: 1200px;
+  width: 90vw;
+  padding: 48px 32px 32px;
+  box-sizing: border-box;
+  color: #222;
+  box-shadow: 0 8px 32px rgba(44, 19, 84, 0.12);
+  font-family: 'Inter', Arial, sans-serif;
+}
+.form-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 40px;
+  max-width: 900px;
+  margin: 0 auto 32px auto;
+}
+
+/* Animação de label flutuante nos inputs */
+.form-group {
+    position: relative;
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+      outline: none;
+}
+
+.form-group label {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      background: white;
+      padding: 0 4px;
+      color: #888;
+      transition: 0.2s;
+      pointer-events: none;
+}
+
+input[type="text"]:focus + label,
+input[type="text"]:not(:placeholder-shown) + label,
+input[type="email"]:focus + label,
+input[type="email"]:not(:placeholder-shown) + label,
+input[type="password"]:focus + label,
+input[type="password"]:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 10px;
+    font-size: 12px;
+    color: #333;
+}
+/* Fim label flutuantes */
+
+/* Label Flutuante para select */
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  appearance: none;
+  background-color: white;
+  outline: none;
+}
+
+.form-group label {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: white;
+  padding: 0 4px;
+  color: #888;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+/* Quando o select tem valor (não é o option vazio) */
+select:focus + label,
+select:not([value=""]) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #333;
+}
+/* Fim label flutuante para select*/
+.form-group input:focus, select:focus {
+  border-color: #a084e8;
+}
+.cpf-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-top: 0;
+}
+.cpf-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.cpf-checkbox input[type="checkbox"] {
+  accent-color: #222;
+  width: 18px;
+  height: 18px;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 32px;
+  gap: 12px;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.form-footer label {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.form-footer input[type="checkbox"] {
+  accent-color: #222;
+  width: 18px;
+  height: 18px;
+}
+.form-footer a {
+  color: #a084e8;
+  text-decoration: none;
+  font-weight: 400;
+  margin-left: 2px;
+}
+.form-footer a:hover {
+  text-decoration: underline;
+}
+.submit-btn {
+  display: block;
+  margin: 32px auto 0 auto;
+  background: #5f3dc4;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 36px;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(44, 19, 84, 0.08);
+}
+.submit-btn:hover {
+  background: #7c5fe6;
+}
+
+.bnt-enviar{
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .main-title {
+    margin-left: 32px;
+    font-size: 2rem;
+  }
+  .form-container {
+    padding: 32px 8px 24px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 24px 0;
+  }
+  .form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 16px 0;
+    gap: 12px;
+  }
+  .main-title {
+    margin-left: 16px;
+    font-size: 1.3rem;
+  }
+  .form-container {
+    padding: 16px 2vw;
+    border-radius: 18px;
+  }
+  .form-title {
+    font-size: 1.1rem;
+  }
+  .submit-btn {
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+
+/*  para mexer NO ESPAÇAMENTO */
+.form-grid > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

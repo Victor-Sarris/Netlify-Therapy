@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary: #7c3aed;
+    --primary-light: #ede9fe;
+    --gray: #f3f4f6;
+    --gray-dark: #6b7280;
+    --white: #fff;
+    --shadow: 0 4px 24px rgba(60, 60, 120, 0.08);
+    --branco-default: #fff;
+    --box-shadow-roxo: rgba(44, 0, 128, 0.15);
+    --btn-color-roxo: #5a23c8;
+    --btn-hover-roxo: #2b1e6b;
+    --link-login: #b36be2;
+    --link-login-hover: #5a23c8;
+    --link-home-list-hover: #b150a4;
+    --primary-color: #5a23c8;
+    --second-color: #1e98b6;
+}
+
+
+
+body {
+    background-color: var(--gray);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+/* Conteúdo principal */
+main {
+    font-family: "Poppins", sans-serif;
+    margin-left: 10px;
+    width: calc(100% - 260px);
+    height: 100vh;
+}
+
+.main-content {
+    padding: 0 8px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.welcome h1 {
+    font-size: 24px;
+    color: var(--gray-dark);
+    margin-bottom: 10px;
+}
+
+.welcome h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #666;
+    font-size: 14px;
+}
+
+.header-image img {
+    max-width: 150px;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.progress-section,
+.calendar-section,
+.patients-list {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.calendar-section h3 {
+    text-align: center;
+}
+
+.donut-chart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--primary-color) 0% 25%,
+        var(--second-color) 0% 70%,
+        var(--gray) 0% 100%
+    );
+}
+
+.chart-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.legend-item .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.dot.purple {
+    background-color: var(--primary-color);
+}
+
+.dot.blue {
+    background-color: var(--second-color);
+}
+
+.actions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.action-card {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.action-card img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.calendar-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.calendar-header {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+}
+
+.calendar-weekdays div {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.calendar-days div,
+.calendar-weekdays div {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 8px 0;
+}
+
+.calendar-days div.empty {
+    background-color: transparent;
+}
+
+.patients-list {
+    grid-column: span 3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+td {
+    padding: 12px 16px;
+    font-size: 13px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.opçoes {
+    color: var(--primary-color);
+    text-align: left;
+    font-size: 13px;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.status.active {
+    color: rgb(64, 219, 77);
+}
+
+.status.inactive {
+    color: rgb(235, 58, 58);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    main {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .patients-list {
+        grid-column: span 1;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-image {
+        margin-top: 20px;
+    }
+}

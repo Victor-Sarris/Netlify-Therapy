@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente Agenda</title>
+    <link rel="shortcut icon" href="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/tela-agenda.css">
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/popup-meets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'appointment': '#FFF8E1',
+                        'appointment-text': '#8B6E00',
+                        'shift': '#F3F0FF',
+                        'shift-text': '#5E35B1',
+                    }
+                }
+            }
+        }
+    </script> -->
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo"><img src="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="logo"> <span class="logo-text">Therapy</span></div>
+            </div>
+            <div class="profile-mini">
+                <img src="../../01. and_icons_and_images/img_cliente/cliente.png" alt="Foto do cliente">
+                <div class="name"><a href="tela_perfil_cliente.html">Davi Oliveira</a></div>
+            </div>
+            <nav>  <!-- obs.:sidebar cliente-->
+                <ul>
+                     <li><a href="tela_outros_especialistas.html"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
+                    <li><a href="tela_meet_paciente.html" onclick="showMeetPopup()"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
+                   
+                    <li><a href="tela_historico_consultas.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+                    <li><a href="tela-agenda.html" class="active"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
+                  
+                    <li><a href="tela_msg_cliente.html"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+                    <li><a href="tela_perfil_cliente_edicao.html"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../tela_de_login.html"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+            </div>
+        </aside>
+
+        <main class="flex justify-around container">
+            <div class="container flex flex-col mx-auto px-4 py-8 max-w-5xl">
+                <!-- Cabeçalho -->
+                <div class="mb-6 mt-4">
+                    <p class="text-gray-500 text-lg mb-1">Especialistas Disponíveis </p>
+                    <h1 class="text-3xl font-bold text-gray-900">Calendário de Especialistas</h1>
+                </div>
+                <!--Seleção de periodo-->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden w-3xl">
+                    <div class="bg-indigo-50 p-4 flex justify-between items-center">
+                        <h2 class="text-lg font-semibold text-gray-800">Jan 27 - 2025</h2>
+                        <div class="relative">
+                            <select class="bg-white px-4 py-2 rounded-md shadow-md flex items-center space-x-2 text-sm"
+                                name="" id="">
+                                <option value="#" selected>Jan 27 - Jan 31</option>
+                                <option value="">Jan 27 - Fev 01</option>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!--Cabeçalho dos Dias -->
+                    <div class="grid grid-cols-6 border-b border-gray-300">
+                        <div class="border-r border-gray-300"></div>
+                        <div class="text-center py-4 border-r border-gray-300">
+                            <div class="text-2xl font-medium text-gray-400">27</div>
+                            <div class="text-sm text-gray-500">Seg</div>
+                        </div>
+                        <div class="text-center py-4 border-r border-gray-300">
+                            <div class="text-2xl font-medium text-gray-400">28</div>
+                            <div class="text-sm text-gray-500">Ter</div>
+                        </div>
+                        <div class="text-center py-4 border-r border-gray-300">
+                            <div class="text-2xl font-medium text-gray-400">29</div>
+                            <div class="text-sm text-gray-500">Qua</div>
+                        </div>
+                        <div class="text-center py-4 border-r border-gray-300">
+                            <div class="text-2xl font-medium text-gray-400">30</div>
+                            <div class="text-sm text-gray-500">Qui</div>
+                        </div>
+                        <div class="text-center py-4 border-gray-300">
+                            <div class="text-2xl font-medium text-gray-400">31</div>
+                            <div class="text-sm text-gray-500">Sex</div>
+                        </div>
+                    </div>
+
+                    <!-- Grid Horarios e agendamentos -->
+                    <div class="grid grid-cols-6">
+                        <div class="border-r border-gray-300">
+                            <!-- 08:00 AM -->
+                            <div class="h-32 relative border-b border-gray-300">
+                                <span class="absolute -top-2.5 -rigth-1 bg-white px-1 text-sm text-gray-500">08:00
+                                    AM</span>
+                            </div>
+
+                            <div class="h-32 relative border-b border-gray-300">
+                                <span class="absolute -top-2.5 -rigth-1 bg-white px-1 text-sm text-gray-500">09:00
+                                    AM</span>
+                            </div>
+
+                            <div class="h-32 relative border-b border-gray-300">
+                                <span class="absolute -top-2.5 -rigth-1 bg-white px-1 text-sm text-gray-500">10:00
+                                    AM</span>
+                            </div>
+
+                            <div class="h-32 relative border-b border-gray-300">
+                                <span class="absolute -top-2.5 -rigth-1 bg-white px-1 text-sm text-gray-500">11:00
+                                    AM</span>
+                            </div>
+
+                        </div>
+
+                        <!-- Segunda-feira (27) -->
+                        <div class="border-r border-gray-300">
+                            <!-- 8:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300 relative">
+                                <div class="bg-amber-100 rounded-lg p-2 h-full">
+                                    <div class="font-medium text-gray-800">Paula</div>
+                                    <div class="flex items-center text-sm text-gray-600 mt-1">   
+                                    </div>
+                                    <div class="flex items-center text-sm text-gray-600 mt-1">
+                                        <i class="far fa-clock mr-1"></i>
+                                        <span>1h</span>
+                                    </div>
+                                    <div class="flex items-center mt-2">
+                                        <img src="https://randomuser.me/api/portraits/women/25.jpg"
+                                            class="w-6 h-6 rounded-full" alt="Ana Paula">
+                                        <div class="w-4 h-4 rounded-full bg-purple-300 ml-1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 9:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300"></div>
+
+                            <!-- 10:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300"></div>
+
+                            <!-- 11:00 AM -->
+                            
+                        </div>
+                        <!-- Terça-feira (28) -->
+                        <div class="border-r border-gray-300">
+                            <!-- 8:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300"></div>
+
+                            <!-- 9:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300">
+                                
+                            </div>
+
+                            <!-- 10:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300"></div>
+
+                            <!-- 11:00 AM -->
+                            <div class="h-32 p-1"></div>
+                        </div>
+
+                        <!-- Quarta-feira (29) -->
+                        <div class="border-r border-gray-300">
+                            <!-- 8:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300">
+                                <div class="bg-amber-100 rounded-lg p-2 h-full">
+                                    <div class="font-medium text-gray-800">Ana</div>
+                                    <div class="flex items-center text-sm text-gray-600 mt-1">
+                                        <i class="far fa-clock mr-1"></i>
+                                        <span>30 min</span>
+                                    </div>
+                                    <div class="flex items-center mt-2">
+                                        <img src="https://randomuser.me/api/portraits/women/61.jpg"
+                                            class="w-6 h-6 rounded-full" alt="Alana">
+                                        <div class="w-4 h-4 rounded-full bg-purple-300 ml-1"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 9:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300"></div>
+
+                            <!-- 10:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300">
+                                
+                            </div>
+
+                            <!-- deixei essas divs sem nada para facilitar futuras alterações  -->
+                            <!-- 11:00 AM -->
+                            <div class="h-32 p-1"></div>
+                        </div>
+
+                        <!-- Quinta-feira (30) -->
+                        <div class="border-r border-gray-300">
+                            <!-- 8:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300">
+                                
+                            </div>
+
+                            <!-- 9:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300"></div>
+
+                            <!-- 10:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300">
+                                
+                            </div>
+
+                            <!-- 11:00 AM -->
+                            <div class="h-32 p-1"></div>
+                        </div>
+
+                        <!-- Sexta-feira (31) -->
+                        <div>
+                            <!-- 8:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300"></div>
+
+                            <!-- 9:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300">
+                                <div class="bg-amber-100 rounded-lg p-2 h-full">
+                                    <div class="font-medium text-gray-800">Tamara</div>
+                                    <div class="flex items-center text-sm text-gray-600 mt-1">
+                                        <i class="far fa-clock mr-1"></i>
+                                        <span>1h</span>
+                                    </div>
+                                    <div class="flex items-center mt-2">
+                                        <img src="https://randomuser.me/api/portraits/women/52.jpg"
+                                            class="w-6 h-6 rounded-full" alt="Daniele">
+                                        <div class="w-4 h-4 rounded-full bg-purple-300 ml-1"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 10:00 AM -->
+                            <div class="h-32 p-1 border-b border-gray-300"></div>
+
+                            <!-- 11:00 AM -->
+                            <div class="h-32 p-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" container flex flex-col mx-auto px-4 py-34">
+
+                <button
+                    class="flex items-center gap-2 bg-violet-100 text-gray-800 px-4 py-2 rounded-full shadow-sm hover:bg-violet-200 transition w-64">
+                    <span class="bg-white text-gray-600 rounded-full w-6 h-6 flex items-center justify-center text-sm">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    <span class="text-sm font-medium" id="addNotasBtn" class="modal">Marcar Consulta</span>
+                </button>
+
+                <!-- Componente Lembretes -->
+                <div class="bg-violet-50 rounded-2xl p-4 w-64 shadow-sm relative mt-3">
+                    <!-- Título e Menu -->
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold text-gray-900">Lembretes</h2>
+                        <i class="fas fa-ellipsis-v text-gray-800 cursor-pointer"></i>
+                    </div>
+
+                    <!-- Ícone central -->
+                    <div class="flex justify-center mb-2">
+                        <div class="bg-violet-600 rounded-xl p-4">
+                            <i class="fas fa-bell text-white text-xl"></i>
+                        </div>
+                    </div>
+
+                    <!-- Texto -->
+                    <p class="text-center text-gray-800 text-sm">Não Esqueça das Suas Consultas </p>
+                </div>
+                <div class="mt-10">
+                    <img src="../01. and_icons_and_images/image_tela_calendario_agenda/learn.png" alt="">
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <!-- Modal -->
+<div id="modalNotas" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Nova Consulta</h2>
+    <div class="container-modal">
+        <p>Nome do paciente:</p>
+        <input type="text">
+        <p>Data da consulta: </p>
+        <input type="date" placeholder="Data da consulta">
+        <p>Anotações sobre a sessão:</p>
+        <textarea placeholder="Faça anotações sobre a sessão..." rows="5" style="width: 100%;"></textarea>
+    </div>
+    <button id="salvarModalBnt" style="margin-top: 10px;">Salvar Nota</button>
+  </div>
+</div>
+
+<!-- Popup de Meet -->
+<div class="popup-overlay" id="meetPopup">
+  <div class="popup-content">
+    <div class="appointment-card">
+      <div class="appointment-header">
+        <div class="appointment-profile">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do profissional">
+          <div class="appointment-info">
+            <span>Felipe Sousa</span>
+            <span>Psicólogo</span>
+          </div>
+        </div>
+        <div style="text-align: right; color: #6b7280; font-size: 0.98em;">50 minutos</div>
+      </div>
+      <div class="appointment-details">
+        <span>&#128197; 10/06/25</span>
+        <span>&#128337; 09:00</span>
+      </div>
+      <div class="appointment-actions">
+        <button class="btn-primary" onclick="window.open('https://meet.google.com/jkb-npqo-dkw', '_blank')">Iniciar Sessão</button>
+        <button class="btn-outline" onclick="openChat()">Chat</button>
+      </div>
+      <div class="appointment-footer">
+        <a href="#" onclick="hideMeetPopup()">Cancelar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="../../01. JS - Telas de cadastro/Profissional/sidebar.js"></script>
+   <script src="../../01. JS - Telas de cadastro/Paciente/popup-meet.js"></script>
+</body>
+
+</html>

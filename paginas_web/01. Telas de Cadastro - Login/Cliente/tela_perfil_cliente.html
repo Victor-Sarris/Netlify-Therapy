@@ -1,0 +1,122 @@
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Cliente | Therapy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../..//01. Css - Telas de Cadasto - Login/Paciente/tela_perfil_cliente.css">
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/popup-meets.css">
+    <link rel="shortcut icon" href="../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/style_navbar.css">
+</head>
+<body>
+    <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo"><img src="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="logo"> <span class="logo-text">Therapy</span></div>
+            </div>
+            <div class="profile-mini">
+                <img src="../../01. and_icons_and_images/img_cliente/cliente.png" alt="Foto do cliente">
+                <div class="name"><a href="tela_perfil_cliente.html" class="active">Davi Oliveira</a></div>
+            </div>
+            <nav>  <!-- obs.:sidebar cliente-->
+                <ul>
+                     <li><a href="tela_outros_especialistas.html"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
+
+                    <li><a href="tela_meet_paciente.html"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
+
+                    <li><a href="tela_historico_consultas.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+                    <li><a href="tela-agenda.html"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
+                  
+                    <li><a href="tela_msg_cliente.html"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+                    <li><a href="tela_perfil_cliente_edicao.html"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../tela_de_login.html"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+            </div>
+        </aside>
+        <main class="main">
+            <div class="profile-header">
+                <div class="profile-photo">
+                    <img src="../..//01. and_icons_and_images/img_cliente/cliente.png" alt="Foto do Cliente"><!-- img maior cliente-->
+                <div class="name"><a href="#" class="active"></a></div>
+                    <button class="edit-btn" title="Editar Foto"><i class="fa-solid fa-pen"></i></button>
+                </div>
+                <div class="profile-info">
+                    <h2>Davi Oliveira</h2>
+                    
+                    <div class="city">Floriano, Pi</div>
+                    <a href="tela_perfil_cliente_edicao.html"><button class="edit-profile-btn">Editar seu Perfil</button></a>
+                                      
+                   
+                </div>
+            </div>
+            <div class="info-sections">
+
+                <section class="info-block">
+                    <h3>Biografia de Informações</h3>
+                    <p>Olá, meu nome é Davi, tenho 26 anos.
+                     Sou empresário, proprietário de uma farmácia, e pai de uma filha pequena.
+                      Atualmente, estou enfrentando crises de ansiedade, que surgiram principalmente 
+                      em decorrência de conflitos familiares. Além disso, tenho passado por episódios de pânico.</p>
+                </section>
+               
+                 <section class="info-block">
+                    <h3>Me encontre também</h3>
+                    <ul class="social">
+                        <li><a href="#" title="Facebook"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Popup de Meet -->
+    <div class="popup-overlay" id="meetPopup">
+      <div class="popup-content">
+        <div class="appointment-card">
+          <div class="appointment-header">
+            <div class="appointment-profile">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do profissional">
+              <div class="appointment-info">
+                <span>Felipe Sousa</span>
+                <span>Psicólogo</span>
+              </div>
+            </div>
+            <div style="text-align: right; color: #6b7280; font-size: 0.98em;">50 minutos</div>
+          </div>
+          <div class="appointment-details">
+            <span>&#128197; 10/06/25</span>
+            <span>&#128337; 09:00</span>
+          </div>
+          <div class="appointment-actions">
+            <button class="btn-primary" onclick="window.open('https://meet.google.com/jkb-npqo-dkw', '_blank')">Iniciar Sessão</button>
+            <button class="btn-outline" onclick="openChat()">Chat</button>
+          </div>
+          <div class="appointment-footer">
+            <a href="#" onclick="hideMeetPopup()">Cancelar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="profile.js"></script>
+    <script src="../../01. JS - Telas de cadastro/Paciente/popup-meet.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação do Psicólogo | Therapy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/tela_avaliacao_profissional.css">
+    <link rel="shortcut icon" href="../../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sidebar -->
+        <!-- Conteúdo Principal -->
+        <main class="content">
+            <div class="container">
+                <button class="mobile-menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+               
+                <div class="main">
+                    <div class="profile-header">
+                        <div class="profile-photo">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Psicólogo">
+                        </div>
+                        <div class="profile-info">
+                            <h2>Psicólogo Felipe Sousa</h2>
+                            <div class="crp">CRP 123456</div>
+                            <div class="city">Florianópolis, SC</div>
+                            <div class="rating-summary">
+                                <div class="average-rating">
+                                    <span class="rating-number">4.8</span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="total-reviews">(128 avaliações)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-form">
+                        <h3>Deixe sua avaliação</h3>
+                        <form id="ratingForm">
+                            <div class="star-rating">
+                                <span>Selecione sua avaliação:</span>
+                                <div class="stars-input">
+                                    <i class="far fa-star" data-rating="1"></i>
+                                    <i class="far fa-star" data-rating="2"></i>
+                                    <i class="far fa-star" data-rating="3"></i>
+                                    <i class="far fa-star" data-rating="4"></i>
+                                    <i class="far fa-star" data-rating="5"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reviewTitle">Título da avaliação:</label>
+                                <input type="text" id="reviewTitle" placeholder="Ex: Excelente profissional" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reviewText">Sua avaliação:</label>
+                                <textarea id="reviewText" placeholder="Conte-nos sobre sua experiência..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-review">Enviar Avaliação</button>
+                        </form>
+                    </div>
+
+                    <div class="reviews-section">
+                        <h3>Avaliações Recentes</h3>
+                        <div class="reviews-list">
+                            <!-- Exemplo de avaliação -->
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto do avaliador">
+                                        <span class="reviewer-name">Maria Silva</span>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <h4>Profissional excepcional</h4>
+                                <p>Excelente atendimento! O Dr. Felipe é muito atencioso e profissional. Suas técnicas de terapia têm me ajudado muito no meu desenvolvimento pessoal.</p>
+                                <span class="review-date">Há 2 dias</span>
+                            </div>
+
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Foto do avaliador">
+                                        <span class="reviewer-name">João Santos</span>
+                                    </div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <h4>Ótimo profissional</h4>
+                                <p>Muito bom atendimento e ambiente acolhedor. As sessões têm sido muito produtivas e estou vendo resultados positivos.</p>
+                                <span class="review-date">Há 1 semana</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="../../01. JS - Telas de cadastro/Paciente/tela_avaliacao_profissional.js"></script>
+</body>
+</html>

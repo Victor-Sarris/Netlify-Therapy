@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens_Cliente</title>
+    <link rel="shortcut icon" href="../../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a2d9a56b2b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/tela_msg_cliente.css">
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/popup-meets.css">
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/style_navbar.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Aqui está presente somente o codigo html da sidebar do cliente 
+
+
+copie e cole no arquivo correspondente 
+
+O style da sidebar deve ser adicionado ao arquivo de estilos correspondente 
+ 
+ela pode ser encontrada em css - tela de cadastro/Paciente/Style_navbar.css
+
+-->
+
+       <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo"><img src="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="logo"> <span class="logo-text">Therapy</span></div>
+            </div>
+            <div class="profile-mini">
+                <img src="../../01. and_icons_and_images/img_cliente/cliente.png" alt="Foto do cliente">
+                <div class="name"><a href="tela_perfil_cliente.html">Davi Oliveira</a></div>
+            </div>
+            <nav>  <!-- obs.:sidebar cliente-->
+                <ul>
+                     <li><a href="tela_outros_especialistas.html"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
+                     
+                    <li><a href="tela_meet_paciente.html" onclick="showMeetPopup()"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
+                   
+                    <li><a href="tela_historico_consultas.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+                    <li><a href="tela-agenda.html"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
+                  
+                    <li><a href="tela_msg_cliente.html" class="active"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+                    <li><a href="tela_perfil_cliente_edicao.html"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="../tela_de_login.html"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+            </div>
+        </aside>
+
+
+        <div class="section-main">
+            <main>
+                                <section class="chat-list">
+                        <div class="chat-list-header">
+                            <h2>CHAT THERAPY <span class="badge">5</span></h2>
+                        </div>
+
+                        <div class="search-chat">
+                            <div class="search-input-wrapper">
+                                <input type="text" class="search-input" aria-label="Campo de busca" placeholder="Pesquisar...">
+                            </div>
+                        </div>
+
+                        <div class="conversations">
+                            <div class="conversation-item">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Paciente">
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <h3>Tiago Ramos</h3>
+                                <span class="time">5M</span>
+                            </div>
+                            <p>Já estou disponível.</p>
+                        </div>
+                    </div> 
+                            <div class="conversation-item">
+                                <img src="https://randomuser.me/api/portraits/men/71.jpg" alt="Paciente">
+                                <div class="conversation-info">
+                                    <div class="conversation-header">
+                                        <h3>Carlos Henrique</h3>
+                                        <span class="time">8M</span>
+                                    </div>
+                                    <p>ESPERO VOCÊ!!</p>
+                                </div>
+                            </div>
+                            <div class="conversation-item">
+                                <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Paciente">
+                                <div class="conversation-info">
+                                    <div class="conversation-header">
+                                        <h3>Juliana Mendes</h3>
+                                        <span class="time">15M</span>
+                                    </div>
+                                    <p>AH, ENTENDI</p>
+                                </div>
+                            </div>
+                            <div class="conversation-item">
+                                <img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Paciente">
+                                <div class="conversation-info">
+                                    <div class="conversation-header">
+                                        <h3>Paulo Matheus</h3>
+                                        <span class="time">44M</span>
+                                    </div>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="conversation-item">
+                                <img src="https://randomuser.me/api/portraits/men/87.jpg" alt="Paciente">
+                                <div class="conversation-info">
+                                    <div class="conversation-header">
+                                        <h3>Rafael Coutinho</h3>
+                                        <span class="time">50M</span>
+                                    </div>
+                                    <p></p>
+                                </div>
+                            </div>
+                                        <div class="conversation-item">
+                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Paciente">
+                    <div class="conversation-info">
+                        <div class="conversation-header">
+                            <h3>Camila Ferreira</h3>
+                            <span class="time">50M</span>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="conversation-item">
+                    <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Paciente">
+                    <div class="conversation-info">
+                        <div class="conversation-header">
+                            <h3>Lucas Martins</h3>
+                            <span class="time">50M</span>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="conversation-item">
+                    <img src="https://randomuser.me/api/portraits/men/63.jpg" alt="Paciente">
+                    <div class="conversation-info">
+                        <div class="conversation-header">
+                            <h3>André Silva</h3>
+                            <span class="time">50M</span>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+                        </div>
+                    </section>
+
+                <!-- Área Principal do Chat (Chat Area) -->
+                <section class="chat-area">
+                    <div class="chat-header">
+                        <div class="chat-user">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Paciente">
+                            <div>
+                                <h3>FELIPE</h3><!-- PSICOLOGO -->
+                                <span class="status">ONLINE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message patient">
+                            <p>OLÁ</p>
+                        </div>
+
+                        <div class="message patient">
+                            <p>TENHO VAGA PARA AMANHÃ </p>
+                        </div>
+
+                        <div class="message patient">
+                            <p>SE ACEITAR PODEMOS REMARCAR  </p>
+                        </div>
+
+                        <div class="message patient">
+                            <p>NÃO TEM COMO SER HOJE , POIS TIVE UM COMPROMISSO URGENTE</p>
+                        </div>
+
+                        <div class="message therapist">
+                            <p>OLÁ</p>
+                        </div>
+
+                           <div class="message therapist">
+                            <p>PODE SER AMANHÃ TEM PROBLEMA NÃO </p>
+                        </div>
+
+                        <div class="message patient">
+                            <p>OK</p>
+                        </div>
+
+                        <div class="message patient">
+                            <p>OBRIGADO PELA COMPREENSÃO</p>
+                        </div>
+
+                        <div class="message therapist">
+                            <p>OK, BOM DIA!</p>
+                        </div> 
+                    </div> <!-- CHAAT -->
+
+                    <div class="chat-input">
+                        <button class="attach-btn"><i class="fas fa-paperclip"></i></button>
+                        <input type="text" placeholder="Enviar Mensagem">
+                        <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </section>
+
+                <!-- Painel de Perfil do   Profissinal  -->
+                <aside class="profile-panel">
+                    <div class="patient-profile">
+                        <div class="patient-photo">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do PSICOLOGO">
+                        </div>
+                        <h2>FELIPE</h2>
+                        <p class="status">ONLINE</p>
+
+                        <div class="action-buttons">
+                            <button><i class="fas fa-user"></i><span>PERFIL</span></button>
+                            <button><i class="fas fa-bell"></i><span>NOTIFICAÇÃO</span></button>
+                            <button><i class="fas fa-search"></i><span>BUSCA</span></button>
+                        </div>
+                    </div>
+
+                    <div class="description">
+                        <div class="description-header">
+                            <h3>DESCRIÇÃO</h3>
+                            <button><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="description-content">
+                            <!-- Conteúdo da descrição -->
+                        </div>
+                    </div>
+                    <div class="calendar">
+                        <h3>Calendário</h3>
+                        <div class="calendar-header">
+                            <h4>Julho <span>2025</span></h4>
+                            <div class="calendar-nav">
+                                <button class="prev-month"><i class="fas fa-chevron-left"></i></button>
+                                <button class="next-month"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="calendar-grid">
+                            <div class="weekdays">
+                                <div>D</div>
+                                <div>S</div>
+                                <div>T</div>
+                                <div>Q</div>
+                                <div>Q</div>
+                                <div>S</div>
+                                <div>S</div>
+                            </div>
+
+                            <div class="days">
+                                <div class="prev-month-day">27</div>
+                                <div class="prev-month-day">28</div>
+                                <div>1</div>
+                                <div class="active">2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                                <div>12</div>
+                                <div>13</div>
+                                <div>14</div>
+                                <div>15</div>
+                                <div>16</div>
+                                <div>17</div>
+                                <div>18</div>
+                                <div>19</div>
+                                <div>20</div>
+                                <div>21</div>
+                                <div>22</div>
+                                <div>23</div>
+                                <div>24</div>
+                                <div>25</div>
+                                <div>26</div>
+                                <div>27</div>
+                                <div>28</div>
+                                <div>29</div>
+                                <div>30</div>
+                                <div class="appointment">31</div>
+                                <div class="next-month-day">1</div>
+                                <div class="next-month-day">2</div>
+                                <div class="next-month-day">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </main>
+        </div>
+    </div>
+
+    <!-- Popup de Meet -->
+    <div class="popup-overlay" id="meetPopup">
+      <div class="popup-content">
+        <div class="appointment-card">
+          <div class="appointment-header">
+            <div class="appointment-profile">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do profissional">
+              <div class="appointment-info">
+                <span>Felipe Sousa</span>
+                <span>Psicólogo</span>
+              </div>
+            </div>
+            <div style="text-align: right; color: #6b7280; font-size: 0.98em;">50 minutos</div>
+          </div>
+          <div class="appointment-details">
+            <span>&#128197; 10/06/25</span>
+            <span>&#128337; 09:00</span>
+          </div>
+          <div class="appointment-actions">
+            <button class="btn-primary" onclick="window.open('https://meet.google.com/jkb-npqo-dkw', '_blank')">Iniciar Sessão</button>
+            <button class="btn-outline" onclick="openChat()">Chat</button>
+          </div>
+          <div class="appointment-footer">
+            <a href="#" onclick="hideMeetPopup()">Cancelar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="../../01. JS - Telas de cadastro/Paciente/tela_msg_cliente.JS"></script>
+    <script src="../../01. JS - Telas de cadastro/Paciente/popup-meet.js"></script>
+</body>
+
+</html>
